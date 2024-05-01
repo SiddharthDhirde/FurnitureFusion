@@ -1,5 +1,6 @@
 import * as Route from '@/constants/routes';
-import logo from '@/images/logo-full.png';
+// import logo from '@/images/logo-full.png';
+import FF43 from '@/images/furnitureLogo/FF43.png';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -18,24 +19,25 @@ const Footer = () => {
           <span>
             Developed by
             {' '}
-            <a href="https://github.com/jgudo">JULIUS GUEVARRA</a>
+            Sachin Chaudhari, Siddharth Dhirde, Samarth Kadu, Jayesh Khaire, Harshad Desai and Krushna Singar 
+            {/* <a href="https://github.com/SiddharthDhirde">Siddharth Dhirde</a> */}
           </span>
         </strong>
       </div>
       <div className="footer-col-2">
-        <img alt="Footer logo" className="footer-logo" src={logo} />
+        <img alt="Footer logo" className="footer-logo" src={FF43} />
         <h5>
           &copy;&nbsp;
           {new Date().getFullYear()}
         </h5>
       </div>
       <div className="footer-col-3">
-        <strong>
+        {/* <strong>
           <span>
             Fork this project &nbsp;
-            <a href="https://github.com/jgudo/ecommerce-react">HERE</a>
+            <a href="">HERE</a>
           </span>
-        </strong>
+        </strong> */}
       </div>
     </footer>
   );

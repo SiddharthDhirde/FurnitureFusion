@@ -1,30 +1,36 @@
-import { ArrowRightOutlined } from '@ant-design/icons';
-import { MessageDisplay } from '@/components/common';
-import { ProductShowcaseGrid } from '@/components/product';
-import { FEATURED_PRODUCTS, RECOMMENDED_PRODUCTS, SHOP } from '@/constants/routes';
+import { ArrowRightOutlined } from "@ant-design/icons";
+import { MessageDisplay } from "@/components/common";
+import { ProductShowcaseGrid } from "@/components/product";
 import {
-  useDocumentTitle, useFeaturedProducts, useRecommendedProducts, useScrollTop
-} from '@/hooks';
-import bannerImg from '@/images/banner-girl.png';
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+  FEATURED_PRODUCTS,
+  RECOMMENDED_PRODUCTS,
+  SHOP,
+} from "@/constants/routes";
+import {
+  useDocumentTitle,
+  useFeaturedProducts,
+  useRecommendedProducts,
+  useScrollTop,
+} from "@/hooks";
+import sofas2 from "@/images/furniture/sofas2.png";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  useDocumentTitle('Salinaka | Home');
+  useDocumentTitle("Furniture Fusion | Home");
   useScrollTop();
 
   const {
     featuredProducts,
     fetchFeaturedProducts,
     isLoading: isLoadingFeatured,
-    error: errorFeatured
+    error: errorFeatured,
   } = useFeaturedProducts(6);
   const {
     recommendedProducts,
     fetchRecommendedProducts,
     isLoading: isLoadingRecommended,
-    error: errorRecommended
+    error: errorRecommended,
   } = useRecommendedProducts(6);
 
   return (
@@ -33,13 +39,13 @@ const Home = () => {
         <div className="banner">
           <div className="banner-desc">
             <h1 className="text-thin">
-              <strong>See</strong>
-              &nbsp;everything with&nbsp;
-              <strong>Clarity</strong>
+              <strong>Transform</strong>
+              &nbsp;your home with&nbsp;
+              <strong>Stylish Furniture</strong>
             </h1>
             <p>
-              Buying eyewear should leave you happy and good-looking, with money in your pocket.
-              Glasses, sunglasses, and contacts—we’ve got your eyes covered.
+              Discover exquisite furniture pieces designed to inspire. Shop now
+              for quality pieces that redefine comfort and sophistication.
             </p>
             <br />
             <Link to={SHOP} className="button">
@@ -47,14 +53,16 @@ const Home = () => {
               <ArrowRightOutlined />
             </Link>
           </div>
-          <div className="banner-img"><img src={bannerImg} alt="" /></div>
+          <div className="banner-img">
+            <img src={sofas2} alt="" />
+          </div>
         </div>
         <div className="display">
           <div className="display-header">
             <h1>Featured Products</h1>
             <Link to={FEATURED_PRODUCTS}>See All</Link>
           </div>
-          {(errorFeatured && !isLoadingFeatured) ? (
+          {errorFeatured && !isLoadingFeatured ? (
             <MessageDisplay
               message={errorFeatured}
               action={fetchFeaturedProducts}
@@ -72,7 +80,7 @@ const Home = () => {
             <h1>Recommended Products</h1>
             <Link to={RECOMMENDED_PRODUCTS}>See All</Link>
           </div>
-          {(errorRecommended && !isLoadingRecommended) ? (
+          {errorRecommended && !isLoadingRecommended ? (
             <MessageDisplay
               message={errorRecommended}
               action={fetchRecommendedProducts}

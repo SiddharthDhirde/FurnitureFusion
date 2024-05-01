@@ -1,7 +1,7 @@
 /* eslint-disable indent */
 import { FilterOutlined, ShoppingOutlined } from '@ant-design/icons';
 import * as ROUTE from '@/constants/routes';
-import logo from '@/images/logo-full.png';
+import FF43 from '@/images/furnitureLogo/FF43.png'
 import React, { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import {
@@ -69,7 +69,7 @@ const Navigation = () => {
   return (
     <nav className="navigation" ref={navbar}>
       <div className="logo">
-        <Link onClick={onClickLink} to="/"><img alt="Logo" src={logo} /></Link>
+        <Link onClick={onClickLink} to="/"><img alt="Logo" src={FF43} /></Link>
       </div>
       <ul className="navigation-menu-main">
         <li><NavLink activeClassName="navigation-menu-active" exact to={ROUTE.HOME}>Home</NavLink></li>
@@ -121,7 +121,7 @@ const Navigation = () => {
             )}
             {pathname !== ROUTE.SIGNIN && (
               <Link
-                className="button button-small button-muted margin-left-s"
+                className="button button-small border-radius-10 button-muted margin-left-s"
                 onClick={onClickLink}
                 to={ROUTE.SIGNIN}
               >
