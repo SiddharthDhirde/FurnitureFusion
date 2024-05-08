@@ -137,7 +137,7 @@ const ViewProduct = () => {
                   onClick={handleAddToBasket}
                   type="button"
                 >
-                  {isItemOnBasket(product.id) ? 'Remove From Basket' : 'Add To Basket'}
+                  {isItemOnBasket(product.id) ? 'Remove From Basket' : 'shop now'}
                 </button>
               </div>
             </div>
