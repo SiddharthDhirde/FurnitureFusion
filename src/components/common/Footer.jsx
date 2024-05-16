@@ -19,8 +19,7 @@ const Footer = () => {
           <span>
             Developed by
             {' '}
-            Sachin Chaudhari, Siddharth Dhirde, Samarth Kadu, Jayesh Khaire, Harshad Desai and Krushna Singar 
-            {/* <a href="https://github.com/SiddharthDhirde">Siddharth Dhirde</a> */}
+            <a href="https://github.com/SiddharthDhirde">SIDDHARTH DHIRDE</a>
           </span>
         </strong>
       </div>
