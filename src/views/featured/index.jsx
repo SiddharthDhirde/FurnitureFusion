@@ -5,7 +5,7 @@ import SofaFeatured from '@/images/furniture/SofaFeatured.jpeg';
 import React from 'react';
 
 const FeaturedProducts = () => {
-  useDocumentTitle('Featured Products | Salinaka');
+  useDocumentTitle('Featured Products | Furniture Fusion');
   useScrollTop();
 
   const {

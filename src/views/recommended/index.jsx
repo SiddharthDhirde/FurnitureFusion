@@ -5,7 +5,7 @@ import RecommendedFurniture from '@/images/furniture/RecommendedFurniture.png'
 import React from 'react';
 
 const RecommendedProducts = () => {
-  useDocumentTitle('Recommended Products | Salinaka');
+  useDocumentTitle('Recommended Products | Furniture Fusion');
   useScrollTop();
 
   const {
